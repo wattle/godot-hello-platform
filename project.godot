@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Hello-godot"
-run/main_scene="res://src/levels/LevelTemplate.tscn"
+run/main_scene="res://src/screens/MainScreen.tscn"
 config/icon="res://icon.png"
 
 [input]

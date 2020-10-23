@@ -2,6 +2,17 @@ extends actor
 
 # velocity.y = max(velocity.y, speed.y)
 
+export var stomp_impulse := 800.0
+
+func _on_EnemyDetector_area_entered(area):
+	# TODO debug the jump
+	_velocity = calculate_stomp_velocity(_velocity, stomp_impulse)
+	# pass
+
+func _on_EnemyDetector_body_entered(body):
+	queue_free()
+
+
 func _physics_process(delta):
 	var direction := get_direction()
 	_velocity = calculate_move_velocity(_velocity, direction, speed)
@@ -33,3 +44,8 @@ func calculate_move_velocity(linear_velocity: Vector2,
 		if is_jump_interrupted: 
 			out.y = 0.0
 		return out
+
+func calculate_stomp_velocity(linear_velocity: Vector2, impulse: float) -> Vector2:
+	var out := linear_velocity
+	out.y = -impulse
+	return out

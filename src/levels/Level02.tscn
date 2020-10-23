@@ -1,14 +1,12 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://src/actors/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/actors/enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/background.png" type="Texture" id=4]
 [ext_resource path="res://src/objects/coins.tscn" type="PackedScene" id=5]
-[ext_resource path="res://src/objects/portal.tscn" type="PackedScene" id=6]
-[ext_resource path="res://src/levels/Level02.tscn" type="PackedScene" id=7]
 
-[node name="LevelTemplate" type="Node2D"]
+[node name="Level02" type="Node2D"]
 __meta__ = {
 "_edit_vertical_guides_": [ 2080.0, 2080.0 ]
 }
@@ -44,14 +42,7 @@ limit_bottom = 3000
 [node name="enemy" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1872, 512 )
 
-[node name="enemy2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1144, 520 )
-
 [node name="coin" parent="." instance=ExtResource( 5 )]
 position = Vector2( 400, 384 )
-
-[node name="portal" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1400, 288 )
-next_scene = ExtResource( 7 )
 
 [editable path="player"]
