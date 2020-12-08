@@ -16,3 +16,4 @@ func teleport():
 	anim_player.play("fade_in")
 	yield(anim_player, "animation_finished")
 	get_tree().change_scene_to(next_scene)
+	

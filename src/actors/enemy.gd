@@ -9,6 +9,7 @@ func _ready():
 func _on_StompDetector_body_entered(body):
 	if body.global_position.y > get_node("StompDetector").global_position.y :
 		return
+	Autoloader.player_score += 1
 	get_node("CollisionShape2D").disabled = true
 	queue_free()
 

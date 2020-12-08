@@ -24,6 +24,10 @@ config/name="Hello-godot"
 run/main_scene="res://src/screens/MainScreen.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Autoloader="*res://src/autoload/Autoloader.tscn"
+
 [input]
 
 move_left={
